@@ -7,7 +7,7 @@ This project is a Laravel-based RESTful API designed to manage restaurant reserv
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Database Setup](#database-setup)
-- [Docker Setup](#docker-setup)
+- [Postman Collection](#postman-collection)
 
 ## Installation
 
@@ -69,6 +69,11 @@ This project is a Laravel-based RESTful API designed to manage restaurant reserv
     php artisan db:seed
     ```
 
-## Docker Setup
+## Postman Collection
 
-(Include Docker setup instructions here if applicable.)
+1. **Import this collection:**
+
+    ```bash
+    https://api.postman.com/collections/35144604-c9ac374c-3c62-4219-916f-d634509e5424?access_key=PMAT-01J5HSP1Q0PQ1J35AX1P3DEJTG
+
+    ```

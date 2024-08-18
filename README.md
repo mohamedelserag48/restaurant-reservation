@@ -73,7 +73,7 @@ This project is a Laravel-based RESTful API designed to manage restaurant reserv
 
 1. **Import this collection:**
 
-    ```bash
-    https://api.postman.com/collections/35144604-c9ac374c-3c62-4219-916f-d634509e5424?access_key=PMAT-01J5HSP1Q0PQ1J35AX1P3DEJTG
+    ```
+   can find postman collection file inside base directroy of the project 
 
     ```

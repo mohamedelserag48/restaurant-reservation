@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger("order_id");
             $table->unsignedBigInteger("meal_id");
             $table->float("amount_to_pay");
+            $table->integer("count")->default(1);
             $table->timestamps();
             $table->softDeletes();
 

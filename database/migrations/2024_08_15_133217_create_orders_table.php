@@ -15,9 +15,10 @@ return new class extends Migration
             $table->bigIncrements("id");
             $table->unsignedBigInteger("user_id");
             $table->unsignedBigInteger("reservation_id");
-            $table->unsignedBigInteger("customer_id");
             $table->unsignedBigInteger("dining_table_id");
             $table->float("total");
+            $table->float("taxes")->nullable();
+            $table->float("service")->nullable();
             $table->boolean("paid")->default(false);
             $table->dateTime("date");
             $table->timestamps();
@@ -25,7 +26,6 @@ return new class extends Migration
 
             $table->foreign("user_id")->references("id")->on("users");
             $table->foreign("reservation_id")->references("id")->on("reservations");
-            $table->foreign("customer_id")->references("id")->on("customers");
             $table->foreign("dining_table_id")->references("id")->on("dining_tables");
         });
     }

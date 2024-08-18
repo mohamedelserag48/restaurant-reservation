@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('meals', function (Blueprint $table) {
+        Schema::create('app_configs', function (Blueprint $table) {
             $table->bigIncrements("id");
-            $table->string("name");
-            $table->float("price",6,4);
-            $table->text("description")->nullable();
-            $table->integer("available_quantity");
-            $table->float("discount",4,2)->default(0.00);
+            $table->string("key");
+            $table->string("value");
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('meals');
+        Schema::dropIfExists('app_configs');
     }
 };

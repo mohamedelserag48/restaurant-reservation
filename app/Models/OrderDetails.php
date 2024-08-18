@@ -9,7 +9,7 @@ class OrderDetails extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["order_id","meal_id","amount_to_pay"];
+    protected $fillable = ["order_id","meal_id","amount_to_pay", "count"];
 
     public function meal(){
         return $this->belongsTo(Meal::class);

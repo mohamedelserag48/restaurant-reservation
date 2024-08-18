@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Admin;
 use App\Models\Role;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
@@ -18,7 +19,7 @@ class UserSeeder extends Seeder
     {
         //
 
-        Admin::create([
+        User::create([
             'name' => "Waiter",
             'email' => "waiter@restaurant.com",
             'password' => \Hash::make("123456"),

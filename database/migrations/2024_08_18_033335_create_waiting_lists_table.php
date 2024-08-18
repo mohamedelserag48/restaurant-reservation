@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('meals', function (Blueprint $table) {
+        Schema::create('waiting_lists', function (Blueprint $table) {
             $table->bigIncrements("id");
-            $table->string("name");
-            $table->float("price",6,4);
-            $table->text("description")->nullable();
-            $table->integer("available_quantity");
-            $table->float("discount",4,2)->default(0.00);
+            $table->unsignedBigInteger("customer_id");
+            $table->date("date");
             $table->timestamps();
-            $table->softDeletes();
+
+            $table->foreign("customer_id")->references("id")->on("customers")
+                ->onDelete("cascade")->onUpdate("cascade");
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('meals');
+        Schema::dropIfExists('waiting_lists');
     }
 };
